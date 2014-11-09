@@ -1,12 +1,17 @@
 package com.example.hangman;
 
+import android.R.array;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import java.util.ArrayList;
 
 public class MediumActivity extends ActionBarActivity {
 
+		private ArrayList<String> wordlist = new ArrayList<String>();
+			
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
