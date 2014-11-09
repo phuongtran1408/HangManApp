@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,34 +20,52 @@ public class EasyActivity extends ActionBarActivity {
 	private Random randomGenerator = new Random();
 	private EditText edit1, edit2, edit3, edit4;
 	private int count = 0;
-	private int maxAttempts = 5;
+	private int maxAttempts = 10;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_easy);
 		
-		 wordlist = new ArrayList<String>();
+		wordlist = new ArrayList<String>();
 		
 		wordlist.add("LYNX");
 		wordlist.add("MIND");
-		//wordlist.add("MEGA");
+		wordlist.add("MEGA");
 		wordlist.add("BEST");
 		wordlist.add("SEXY");
-		//wordlist.add("BEAT");
-		//wordlist.add("FOUR");
-		//wordlist.add("POOP");
+		wordlist.add("BEAT");
+		wordlist.add("FOUR");
+		wordlist.add("POOP");
+		wordlist.add("CODE");
+		wordlist.add("MEET");
+		wordlist.add("GOAL");
+		wordlist.add("MEAL");
+		wordlist.add("FOOD");
+		wordlist.add("HELP");
+		wordlist.add("MINE");
+		wordlist.add("COOK");
+		wordlist.add("COOL");
+		wordlist.add("FANS");
+		wordlist.add("BEAN");
+		wordlist.add("LIST");
+		wordlist.add("WORD");
+		wordlist.add("QUIT");
+		wordlist.add("LIFE");
+		wordlist.add("DIED");
+		wordlist.add("BOOK");
+		wordlist.add("ZOOM");
+		wordlist.add("COPE");
+		wordlist.add("EASY");
+				
 		
 		int index = randomGenerator.nextInt(wordlist.size());
 		String word = wordlist.get(index);
-		one = word.substring(1);
-		two = word.substring(2);
-		three = word.substring(3);
-		four = word.substring(4);
 		
-		System.out.println("HIII");
-		
-		System.out.println(one + two + three + four);
+		one = word.substring(0, 1);
+		two = word.substring(1, 2);
+		three = word.substring(2, 3);
+		four = word.substring(3, 4);
 		
 		// Get user input from fields
 		edit1 = (EditText)findViewById(R.id.editText1);
@@ -75,32 +94,52 @@ public class EasyActivity extends ActionBarActivity {
 	}
 	
 	public void clickSubmit(View view) {		
-		one = "C";
-		two = "O";
-		three = "D";
-		four = "E";
-		
 		// Turn to string
 		let1 = edit1.getText().toString().trim();
 		let2 = edit2.getText().toString().trim();
 		let3 = edit3.getText().toString().trim();
 		let4 = edit4.getText().toString().trim();
 		
-		count = 0;
-		
-		check(one, let1, edit1);
-		check(two, let2, edit2);
-		check(three, let3, edit3);
-		check(four, let4, edit4);
-		
-		System.out.print(count);
-		if(count != 4) {
-			maxAttempts--;
-			popUp();
+		if(let1.equals("") || let2.equals("") || let3.equals("") || let4.equals("")) {
+			AlertDialog.Builder builder = new AlertDialog.Builder(EasyActivity.this);
+			builder.setMessage("One of the index is empty!");
+			builder.setTitle("WARNING!");
+			builder.setPositiveButton(android.R.string.ok, null);
+			AlertDialog dialog = builder.create();
+			dialog.show();
 		}
-		else if(count == 4){
-			Intent intent = new Intent(this, EasyActivity.class);
-	    	startActivity(intent);
+		else {		
+			count = 0;
+			
+			check(one, let1, edit1);
+			check(two, let2, edit2);
+			check(three, let3, edit3);
+			check(four, let4, edit4);
+			
+			if(count != 4) {
+				maxAttempts--;
+				if(maxAttempts != 0) popUp();
+				else {
+					AlertDialog.Builder builder = new AlertDialog.Builder(EasyActivity.this);
+					builder.setMessage("The answer is " + one + two + three + four);
+					builder.setTitle("Sorry! Nice try!");
+					builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+						
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							Intent intent = new Intent(EasyActivity.this, EasyActivity.class);
+					    	startActivity(intent);
+							
+						}
+					});
+					AlertDialog dialog = builder.create();
+					dialog.show();
+				}
+			}
+			else if(count == 4){
+				Intent intent = new Intent(this, WinActivity.class);
+		    	startActivity(intent);
+			}
 		}
 	}
 	

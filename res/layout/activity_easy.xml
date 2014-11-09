@@ -18,7 +18,10 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="122dp"
         android:layout_marginLeft="14dp"
-        android:background="@color/white"
+        android:background="@color/grayish"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
         android:ems="10" />
 
     <EditText
@@ -29,7 +32,10 @@
         android:layout_alignBottom="@+id/editText2"
         android:layout_marginLeft="14dp"
         android:layout_toRightOf="@+id/editText2"
-        android:background="@color/white"
+        android:inputType="textCapCharacters"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:maxLength="1"
+        android:background="@color/grayish"
         android:ems="10" >
 
         <requestFocus />
@@ -55,12 +61,15 @@
         android:layout_alignBottom="@+id/editText1"
         android:layout_marginLeft="16dp"
         android:layout_toRightOf="@+id/editText1"
-        android:background="@color/white"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:background="@color/grayish"
         android:ems="10" />
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText3"
         android:layout_centerHorizontal="true"
@@ -77,7 +86,10 @@
         android:layout_alignBaseline="@+id/editText3"
         android:layout_alignBottom="@+id/editText3"
         android:layout_alignRight="@+id/textView1"
-        android:background="@color/white"
+        android:inputType="textCapCharacters"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:maxLength="1"
+        android:background="@color/grayish"
         android:ems="10" />
 
 </RelativeLayout>

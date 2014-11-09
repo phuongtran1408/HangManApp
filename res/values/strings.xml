@@ -3,7 +3,6 @@
 
     <string name="app_name">HangMan</string>
     <string name="action_settings">Settings</string>
-    
     <string name="easy_title">easy</string>
     <string name="medium_title">medium</string>
     <string name="difficult_title">difficult</string>
@@ -11,18 +10,24 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_medium">MediumActivity</string>
     <string name="title_activity_difficult">DifficultActivity</string>
-    
+
     <!-- Easy Interface -->
     <string name="easy_activity_title">Welcome to Easyville!</string>
-    <string name="submit_button">submit</string>   
+    <string name="submit_button">submit</string>
     
-    <!--Colors     -->
-	<color name="black">#000000</color>
-	<color name="blackish">#353535</color>
-	<color name="white">#FFFFFF</color>
-	<color name="red">#FF0000</color>
-	<color name="darkred">#811919</color>
+    <!-- Win Interface -->
+    <string name="win_name">YOU WIN!!!</string>
+    <string name="try_again">AGAIN</string>
+    <string name="next_level">NEXT LEVEL</string>
 
+    <!-- Colors -->
+    <color name="black">#000000</color>
+    <color name="blackish">#353535</color>
+    <color name="grayish">#808080</color>
+    <color name="white">#FFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="darkred">#811919</color>
 
+    <string name="title_activity_win">WinActivity</string>
 
 </resources>
