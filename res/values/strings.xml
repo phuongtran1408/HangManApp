@@ -12,10 +12,16 @@
     <string name="title_activity_medium">MediumActivity</string>
     <string name="title_activity_difficult">DifficultActivity</string>
     
+    <!-- Easy Interface -->
+    <string name="easy_activity_title">Welcome to Easyville!</string>
+    <string name="submit_button">submit</string>   
+    
     <!--Colors     -->
 	<color name="black">#000000</color>
 	<color name="blackish">#353535</color>
 	<color name="white">#FFFFFF</color>
+	<color name="red">#FF0000</color>
+	<color name="darkred">#811919</color>
 
 
 
