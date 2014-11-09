@@ -24,6 +24,8 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="52dp"
+        android:clickable="true"
+        android:onClick="easy_button"
         android:text="@string/easy_title" />
 
     <Button
@@ -32,6 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
+        android:clickable="true"
+        android:onClick="medium_button"
         android:text="@string/medium_title" />
 
     <Button
@@ -40,6 +44,8 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button2"
         android:layout_below="@+id/button2"
+        android:clickable="true"
+        android:onClick="difficult_button"
         android:text="@string/difficult_title" />
 
 </RelativeLayout>
