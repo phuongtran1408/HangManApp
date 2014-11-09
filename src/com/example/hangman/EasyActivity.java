@@ -72,6 +72,7 @@ public class EasyActivity extends ActionBarActivity {
 		edit2 = (EditText)findViewById(R.id.editText2);
 		edit3 = (EditText)findViewById(R.id.editText3);
 		edit4 = (EditText)findViewById(R.id.editText4);
+		
 	}
 
 	@Override
