@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HangMan</string>
+    <string name="action_settings">Settings</string>
+    <string name="easy_title">Easy</string>
+    <string name="medium_title">Medium</string>
+    <string name="difficult_title">Diffult</string>
+    <string name="title_activity_easy">EasyActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_medium">MediumActivity</string>
+    <string name="title_activity_difficult">DifficultActivity</string>
+
+</resources>
